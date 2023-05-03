@@ -61,11 +61,11 @@ form{
 }
 
 @media screen and (max-width: 640px) {
-	.hero .content h1 {
-		font-size: 3rem;
-	}
-
-	.hero .content p {
-		font-size: 1.4rem;
-	}
-}
+    .hero .content h1{
+        font-size: 3rem;
+    }
+    
+    .hero .content p{
+        font-size: 1.4rem;
+    }
+} 
