@@ -1,7 +1,7 @@
 import './HeroImgStyles.css';
 import React from 'react';
 import IntroImg from '../assets/bg_01.jpg';
-import { Link } from 'react-router-dom';
+import { BsArrowRepeat } from 'react-icons/bs';
 import '../index.css';
 const HeroImg = () => {
 	return (
@@ -10,26 +10,28 @@ const HeroImg = () => {
 				<img className='into-img' src={IntroImg} alt='intro-img' />
 			</div>
 			<div className='content'>
-				<p>Hi! I am a Software Developer</p>
-				<h1>React Developer</h1>
-				<div className='set-btn'>
-					<button to='/project' className='btn'>
-						SUBMIT
-					</button>
-					<button to='/project' className='btn'>
-						SUBMIT
-					</button>
-					<Link to='/history' className='btn btn-light'>
-						HISTORY
-					</Link>
-					<Link to='/history' className='btn btn-light'>
-						HISTORY
-					</Link>
+				{/* <p>Hi! I am a Software Developer</p> */}
+				<h1>URL-Shortener</h1>
+				<div className='border'>
+					<form className='link'>
+						<input type='date' className='set-date' placeholder='Expiry date' />
+						<input
+							type='text'
+							className='link-input'
+							placeholder='Paste link or URL'
+							size='50'
+						></input>
+						<button type='button' className='submit'>
+							<BsArrowRepeat
+								size={20}
+								style={{ color: 'black', alignItems: 'center' }}
+							/>
+						</button>
+					</form>
 				</div>
 			</div>
 		</div>
-	);  
+	);
 };
-
 
 export default HeroImg;

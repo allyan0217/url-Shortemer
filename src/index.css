@@ -6,7 +6,6 @@
   margin: 0;
   padding: 0;
   font-family: 'Outfit', sans-serif;
-  color: #fff;
 }
 
 body{
@@ -23,7 +22,7 @@ ul{
   list-style-type: none;
 }
 
-.btn{
+/* .btn{
   padding: 12px 32px;
   font-size: 1rem;
   text-transform: uppercase;
@@ -32,7 +31,7 @@ ul{
   border: 1px solid #fff;
   font-weight: 600;
   cursor: pointer;
-}
+} */
 
 .btn-light{
   background: transparent;
