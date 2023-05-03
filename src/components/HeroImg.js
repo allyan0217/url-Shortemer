@@ -13,13 +13,17 @@ const HeroImg = () => {
 			<div className='content'>
 				<p>Hi! I am a Software Developer</p>
 				<h1>React Developer</h1>
-				<div className='set-btn'>
-					<button to='/project' className='btn'>
-						SUBMIT
-					</button>
-					<Link to='/history' className='btn btn-light'>
-						HISTORY
-					</Link>
+				<div>
+					<form>
+						<input
+							type='text'
+							placeholder='Paste Link or URL'
+						></input>
+						<button>
+							SUBMIT
+						</button>
+						{/* <Link to='/history' className='btn btn-light'>HISTORY</Link> */}
+					</form>
 				</div>
 			</div>
 		</div>
