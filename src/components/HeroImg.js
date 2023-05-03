@@ -3,6 +3,7 @@ import React from 'react';
 import IntroImg from '../assets/bg_01.jpg';
 import { Link } from 'react-router-dom';
 import '../index.css';
+import { useState } from 'react';
 
 const HeroImg = () => {
 	return (
@@ -13,7 +14,11 @@ const HeroImg = () => {
 			<div className='content'>
 				<p>Hi! I am a Software Developer</p>
 				<h1>React Developer</h1>
+				
 				<div className='set-btn'>
+					<button to='/project' className='btn'>
+						SUBMIT
+					</button>
 					<button to='/project' className='btn'>
 						SUBMIT
 					</button>
@@ -23,7 +28,8 @@ const HeroImg = () => {
 				</div>
 			</div>
 		</div>
-	);
+	);  
 };
+
 
 export default HeroImg;
