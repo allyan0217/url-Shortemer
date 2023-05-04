@@ -1,12 +1,45 @@
 import React from 'react';
-import HeroImg from '../components/HeroImg';
-import Navbar from '../components/Navbar';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import HeroImg2 from '../components/HeroImg2';
+import {MdDelete} from "react-icons/md";
+
+
 const History = () => {
+	const heading = 'HISTORY';
+	const [arrayLinks, setArrayLinks] = useState([]);
+
+	useEffect(() => {
+		const arrayLinks = localStorage.getItem('arrayLinks');
+		setArrayLinks(JSON.parse(arrayLinks));
+	}, []);
+
+	const handleDelete = (arrayIndex) => {
+		
+	}
+
 	return (
-		<div>
-			<Navbar/>
-            <HeroImg/>
-		</div>
+		<>
+			<div>
+				<HeroImg2 heading={heading} />
+				{arrayLinks && arrayLinks.length
+					? arrayLinks.map((arrayLinks, arrayIndex) => {
+							return (
+								<div>
+									Link - {arrayLinks.link}
+									<br />
+									NewLink - {arrayLinks.newLink}
+									<br />
+									ExpiryDate - {arrayLinks.expiryDate}
+									<MdDelete onClick={()=>handleDelete(arrayIndex)} ></MdDelete>
+								</div>
+							);
+					  })
+					: 'array is empty'}
+
+				{/* <HeroImg/> */}
+			</div>
+		</>
 	);
 };
 

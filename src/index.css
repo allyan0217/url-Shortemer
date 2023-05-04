@@ -12,6 +12,7 @@ body{
   background: #000;
   scrollbar-width: none;
   overflow-y: scroll;
+  color: white;
 }
 h1, h4, p, a{
   text-decoration: none;

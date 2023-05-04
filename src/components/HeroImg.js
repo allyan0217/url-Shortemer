@@ -10,6 +10,8 @@ const HeroImg = () => {
 
 	const handleLinkChange = e => {
 		setLink(e.target.value);
+		setNewLink(link);
+
 	};
 
 	const handleDate = e => {
@@ -17,7 +19,11 @@ const HeroImg = () => {
 	};
 
 	const handleSubmit = () => {
-		console.log({ link, expiryDate });
+		console.log({ link, newLink, expiryDate });
+
+		const arrayLinks = JSON.parse(localStorage.getItem("arrayLinks")) || [];
+		localStorage.setItem('arrayLinks', JSON.stringify([...arrayLinks, {link, newLink, expiryDate}]))
+	
 	};
 	return (
 		<div className='hero'>
