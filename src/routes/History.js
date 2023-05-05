@@ -29,9 +29,6 @@ const History = () => {
                   <br />
                   ExpiryDate - {arrayLinks.expiryDate}
                   <MdDelete onClick={() => handleDelete(arrayIndex)}></MdDelete>
-                  <button className="btn btn-danger btn-sm m-2 bg-color:red ">
-                    Delete
-                  </button>
                 </div>
               );
             })

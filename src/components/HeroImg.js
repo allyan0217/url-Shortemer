@@ -5,7 +5,7 @@ import { BsArrowRepeat } from "react-icons/bs";
 import "../index.css";
 const HeroImg = () => {
   const [link, setLink] = useState("");
-  const [shortUrl, setNewLink] = useState("");
+  const [newLink, setNewLink] = useState("");
   const [expiryDate, setExpiryDate] = useState("");
 
   const handleLinkChange = (e) => {
