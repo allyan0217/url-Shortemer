@@ -1,66 +1,67 @@
-import './HeroImgStyles.css';
-import React, { useState } from 'react';
-import IntroImg from '../assets/bg_01.jpg';
-import { BsArrowRepeat } from 'react-icons/bs';
-import '../index.css';
+import "./HeroImgStyles.css";
+import React, { useState } from "react";
+import IntroImg from "../assets/bg_01.jpg";
+import { BsArrowRepeat } from "react-icons/bs";
+import "../index.css";
 const HeroImg = () => {
-	const [link, setLink] = useState('');
-	const [newLink, setNewLink] = useState('');
-	const [expiryDate, setExpiryDate] = useState('');
+  const [link, setLink] = useState("");
+  const [shortUrl, setNewLink] = useState("");
+  const [expiryDate, setExpiryDate] = useState("");
 
-	const handleLinkChange = e => {
-		setLink(e.target.value);
-		setNewLink(link);
+  const handleLinkChange = (e) => {
+    setLink(e.target.value);
+    setNewLink(link);
+  };
 
-	};
+  const handleDate = (e) => { 
+    setExpiryDate(e.target.value);
+  };
 
-	const handleDate = e => {
-		setExpiryDate(e.target.value);
-	};
+  const handleSubmit = () => {
+    console.log({ link, newLink, expiryDate });
 
-	const handleSubmit = () => {
-		console.log({ link, newLink, expiryDate });
-
-		const arrayLinks = JSON.parse(localStorage.getItem("arrayLinks")) || [];
-		localStorage.setItem('arrayLinks', JSON.stringify([...arrayLinks, {link, newLink, expiryDate}]))
-	
-	};
-	return (
-		<div className='hero'>
-			<div className='mask'>
-				<img className='into-img' src={IntroImg} alt='intro-img' />
-			</div>
-			<div className='content'>
-				{/* <p>Hi! I am a Software Developer</p> */}
-				<h1>URL-Shortener</h1>
-				<div className='border'>
-					<form className='link'>
-						<input
-							type='date'
-							value={expiryDate}
-							onChange={(e)=>handleDate(e)}
-							className='set-date'
-							placeholder='Expiry date'
-						/>
-						<input
-							type='text'
-							value={link}
-							onChange={handleLinkChange}
-							className='link-input'
-							placeholder='Paste link or URL'
-							size='50'
-						/>
-						<button type='button' onClick={handleSubmit} className='submit'>
-							<BsArrowRepeat
-								size={20}
-								style={{ color: 'black', alignItems: 'center' }}
-							/>
-						</button>
-					</form>
-				</div>
-			</div>
-		</div>
-	);
+    const arrayLinks = JSON.parse(localStorage.getItem("arrayLinks")) || [];
+    localStorage.setItem(
+      "arrayLinks",
+      JSON.stringify([...arrayLinks, { link, newLink, expiryDate }])
+    );
+  };
+  return (
+    <div className="hero">
+      <div className="mask">
+        <img className="into-img" src={IntroImg} alt="intro-img" />
+      </div>
+      <div className="content">
+        {/* <p>Hi! I am a Software Developer</p> */}
+        <h1>URL-Shortener</h1>
+        <div className="border"> 
+          <form className="link">
+            <input
+              type="date"
+              value={expiryDate}
+              onChange={(e) => handleDate(e)}
+              className="set-date"
+              placeholder="Expiry date"
+            />
+            <input
+              type="text"
+              value={link}
+              onChange={handleLinkChange}
+              className="link-input"
+              placeholder="Paste link or URL"
+              size="50"
+            />
+            <button type="button" onClick={handleSubmit} className="submit">
+              <BsArrowRepeat
+                size={20}
+                style={{ color: "black", alignItems: "center" }}
+              />
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default HeroImg;
