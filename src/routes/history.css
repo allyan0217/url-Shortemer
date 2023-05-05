@@ -1,0 +1,70 @@
+.History {
+  margin-top: 30px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+}
+
+.long-url {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.short-url {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.expiry {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.actions button:hover {
+  background-color: #0069d9;
+}
+
+.actions a {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.actions a:hover {
+  text-decoration: underline;
+}
