@@ -37,7 +37,7 @@ function App() {
       body: JSON.stringify({
         long_url: url,
         expires_at: expirationDate && expirationDate.toISOString(),
-      }),
+      }), 
     });
     const data = await response.json();
     setShortUrl(data.link);

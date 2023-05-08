@@ -44,7 +44,7 @@ function History() {
 
   return (
     <div>
-      <h1>History</h1>
+      <h1 className="History"> History</h1>
       {urlList.length > 0 ? (
         <table>
           <thead>
@@ -75,7 +75,10 @@ function History() {
                   <button onClick={() => handleCopyShortUrl(urlItem.shortUrl)}>
                     Copy
                   </button>
-                  <button onClick={() => handleEditExpirationDate(urlItem)}>
+                  <button
+                    onClick={() => handleEditExpirationDate(urlItem)}
+                    className="delete"
+                  >
                     Edit Expiration
                   </button>
                   <button onClick={() => handleDeleteUrl(urlItem.id)}>
