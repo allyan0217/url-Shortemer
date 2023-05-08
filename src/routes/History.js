@@ -15,16 +15,16 @@ function History() {
 		}
 	}, []);
 
-  const handleDeleteUrl = id => {
-    const urlIndex = urlList.findIndex(urlItem => urlItem.id === id);
-    if (urlIndex === -1) {
-      return; // the item was not found in the array, so there's nothing to delete
-    }
-    const newUrlList = [...urlList];
-    newUrlList.splice(urlIndex, 1);
-    localStorage.setItem('urlList', JSON.stringify(newUrlList));
-    setUrlList(newUrlList);
-  };
+	const handleDeleteUrl = id => {
+		const urlIndex = urlList.findIndex(urlItem => urlItem.id === id);
+		if (urlIndex === -1) {
+			return; // the item was not found in the array, so there's nothing to delete
+		}
+		const newUrlList = [...urlList];
+		newUrlList.splice(urlIndex, 1);
+		localStorage.setItem('urlList', JSON.stringify(newUrlList));
+		setUrlList(newUrlList);
+	};
 
 	const handleCopyShortUrl = shortUrl => {
 		navigator.clipboard.writeText(shortUrl);
@@ -78,13 +78,19 @@ function History() {
 									{urlItem.expirationDate?.toLocaleDateString() ?? 'Never'}
 								</td>
 								<td>
-									<button onClick={() => handleCopyShortUrl(urlItem.shortUrl)}>
+									<button
+										className='btn'
+										onClick={() => handleCopyShortUrl(urlItem.shortUrl)}
+									>
 										Copy
 									</button>
-									<button onClick={() => handleEditExpirationDate(urlItem)}>
-										Edit Expiration
+									<button className='btn' onClick={() => handleEditExpirationDate(urlItem)}>
+										Edit
 									</button>
-									<button onClick={() => handleDeleteUrl(urlItem.id)}>
+									<button
+										className='btn'
+										onClick={() => handleDeleteUrl(urlItem.id)}
+									>
 										Delete
 									</button>
 								</td>

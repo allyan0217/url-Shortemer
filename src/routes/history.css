@@ -43,12 +43,17 @@ li:hover {
   margin-right: 10px;
 }
 
-.actions {
+/* .actions {
   display: flex;
   align-items: center;
-}
+} */
 
-.actions button {
+/* .set-button{
+  display: flex;
+  flex-direction: column;
+} */
+
+.btn{
   background-color: #007bff;
   color: #fff;
   padding: 5px 10px;
@@ -56,11 +61,11 @@ li:hover {
   border-radius: 5px;
   font-size: 14px;
   cursor: pointer;
-  margin-right: 5px;
+  margin: 4px 3px;
 }
 
-.actions button:hover {
-  background-color: #0069d9;
+button:hover {
+  background-color: #c9d1da;
 }
 
 .actions a {
@@ -70,7 +75,7 @@ li:hover {
   margin-right: 5px;
 }
 
-.actions a:hover {
+a:hover {
   text-decoration: underline;
 }
 
@@ -84,16 +89,10 @@ th, td {
   text-align: left;
   padding: 8px;
   border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-top: 1px solid #ddd;
   border-left: 1px solid #ddd;
 }
-
-/* th {
-  background-color: #f2f2f2;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-} */
 
 tbody tr:hover {
   background-color: grey;
