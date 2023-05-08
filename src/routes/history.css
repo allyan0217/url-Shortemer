@@ -1,8 +1,13 @@
-.History {
-  margin-top: 30px;
+.history {
+  margin-top: 80px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-ul {
+/* ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -20,12 +25,12 @@ li {
 
 li:hover {
   background-color: #f0f0f0;
-}
+} */
 
 .long-url {
   font-size: 16px;
-  font-weight: bold;
-  margin-right: 10px;
+  /* font-weight: bold; */
+  /* margin-right: 10px; */
 }
 
 .short-url {
@@ -67,4 +72,35 @@ li:hover {
 
 .actions a:hover {
   text-decoration: underline;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+/* th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+} */
+
+tbody tr:hover {
+  background-color: grey;
+}
+
+td.long-url {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
